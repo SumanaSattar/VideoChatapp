@@ -4,11 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script defer src="face-api.min.js"></script> 
   <script>
     const ROOM_ID = "<%= roomId %>"
   </script>
+ 
   <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js" defer></script>
   <script src="/socket.io/socket.io.js" defer></script>
+  
   <script src="script.js" defer></script>
   <title>Document</title>
   <style>
@@ -23,9 +26,40 @@
       height: 100%;
       object-fit: cover;
     }
+    canvas {
+      position: absolute;
+    
+      
+    }
+    button {
+      position: relative;
+      
+      
+    }
   </style>
 </head>
 <body>
+    
   <div id="video-grid"></div>
+  <button id="startEvaluationBtn">Start Evaluation</button>
+  <button id="TurnOffFD">Turn off face detection</button>
+  <button id="TurnOnFD">Turn on face detection</button>
+  
+  <ul id="list1">
+
+  </ul>
+
+  <ul id="list2">
+
+  </ul>
+
+  <ul id="list3">
+
+  </ul>
+
+  <ul id="list4">
+
+  </ul>
+ 
 </body>
 </html>
